@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Cabinet Door Rail, Stile, and Panel Sizes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Cabinet Door Rail, Stile, and Panel Sizes</h1>
+        <p>Enter the values below to calculate the sizes for rails, stiles, and panel</p>
+        <form id="cabinetForm">
+            <div class="input-group">
+                <label for="doorHeight">Door Height (inches or mm):</label>
+                <input type="number" id="doorHeight" required>
+            </div>
+            <div class="input-group">
+                <label for="doorWidth">Door Width (inches or mm):</label>
+                <input type="number" id="doorWidth" required>
+            </div>
+            <div class="input-group">
+                <label for="stileWidth">Stile Width (inches or mm):</label>
+                <input type="number" id="stileWidth" required>
+            </div>
+            <div class="input-group">
+                <label for="railWidth">Rail Width (inches or mm):</label>
+                <input type="number" id="railWidth" required>
+            </div>
+            <div class="input-group">
+                <label for="interlockDepth">Interlock Depth (inches or mm):</label>
+                <input type="number" id="interlockDepth" required>
+            </div>
+            <div class="input-group">
+                <label for="panelFloat">Panel Float (inches or mm):</label>
+                <input type="number" id="panelFloat" required>
+            </div>
+            <button type="button" onclick="calculateSizes()">Calculate</button>
+            <button type="reset">Reset Values</button>
+        </form>
+        <div id="results" class="results">
+            <h2>Results</h2>
+            <p>Stile Length: <span id="stileLength"></span></p>
+            <p>Rail Length: <span id="railLength"></span></p>
+            <p>Panel Height: <span id="panelHeight"></span></p>
+            <p>Panel Width: <span id="panelWidth"></span></p>
+        </div>
+        <button id="clearResultsButton" type="button" onclick="clearResults()">Clear Results</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
